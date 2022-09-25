@@ -14,12 +14,16 @@ export default function App() {
       dispatch(decrement())
   }
   
+  const handleIncrementBy = () => {
+      dispatch(incrementBy(5))
+  }
+  
   return (
     <div className="App">
       <h1>{count}</h1>
       <button onClick={handleDecrement}>-</button>
       <button onClick={handleIncrement}>+</button>
-      <button>+5</button>
+      <button onClick={handleIncrementBy}>+5</button>
     </div>
   );
 }
